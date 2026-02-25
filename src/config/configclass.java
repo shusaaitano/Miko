@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import net.proteanit.sql.DbUtils;
 
 public class configclass {
@@ -68,4 +69,10 @@ public class configclass {
             System.out.println("Error displaying data: " + e.getMessage());
         }
     }
+      public ResultSet getData(String sql) throws SQLException{
+          Connection conn = connectDB();
+            Statement stmt = conn.createStatement();
+            ResultSet rst = stmt.executeQuery(sql);
+            return rst;
+        }
 }
