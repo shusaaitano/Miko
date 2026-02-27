@@ -241,8 +241,8 @@ public class register extends javax.swing.JFrame {
           
         
             configclass dbc = new configclass();
-            int result = dbc.insertData("INSERT INTO tbl_user (fullname, email, password,  username, contact, status) "
-                    + "VALUES ('"+fname.getText()+"', '"+email.getText()+"', '"+pword+"', '"+uname.getText()+"', '"+con.getText()+"', 'Pending')");
+            int result = dbc.insertData("INSERT INTO users (u_fname, u_email, u_password,  u_username, u_phone, u_status) "
+                    + "VALUES ('"+fname.getText()+"', '"+email.getText()+"', '"+pass+"', '"+uname.getText()+"', '"+con.getText()+"', 'Pending')");
             if(result == 1){
                 JOptionPane.showMessageDialog(null, "Successfully Registered!");
                     logIn  lf = new logIn();

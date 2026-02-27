@@ -146,30 +146,30 @@ public class logIn extends javax.swing.JFrame {
                    String rehashedPassword;
                    String hashedpass;
                 configclass  dbc= new configclass();
-                ResultSet rs = dbc.getData("SELECT * FROM tbl_user WHERE user_email = '"+user+"'");
+                ResultSet rs = dbc.getData("SELECT * FROM users WHERE u_username = '"+user+"'");
                     if(rs.next()){
-                        hashedpass = rs.getString("password");
+                        hashedpass = rs.getString("u_password");
                          rehashedPassword = PasswordHasher.hashPassword(pass);
-                        if(user.equals(rs.getString("user_email")) && hashedpass.equals(rehashedPassword)){
+                        if(user.equals(rs.getString("u_username")) && hashedpass.equals(rehashedPassword)){
                             JOptionPane.showMessageDialog(null, "Login Success!");
                             dashboard dash = new dashboard();
                             this.dispose();
                             dash.setVisible(true);
                             
                             Singleton singletonInstance = Singleton.getInstance();
-                            int id = rs.getInt("user_id");
-                            String fname = rs.getString("user_fname");
-                            String lname = rs.getString("user_lname");
-                            String email = rs.getString("user_email");
-                            String users = rs.getString("username");
-                            String status = rs.getString("user_status");
+                            int id = rs.getInt("u_id");
+                            String fname = rs.getString("u_fname");
+                            String email = rs.getString("u_email");
+                            String uname = rs.getString("u_username");
+                            String con = rs.getString("u_phone");
+                            String status = rs.getString("u_status");
                             
                             System.out.println("newData: "+id);
                             singletonInstance.setId(id);
                             singletonInstance.setFname(fname);
-                            singletonInstance.setLname(lname);
                             singletonInstance.setEmail(email);
-                            singletonInstance.setUsername(users);
+                            singletonInstance.setUsername(uname);
+                            singletonInstance.setPhone(con);
                             singletonInstance.setStatus(status);
                             
                         }else{

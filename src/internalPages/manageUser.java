@@ -355,7 +355,7 @@ public class manageUser extends javax.swing.JInternalFrame {
             if(a == JOptionPane.YES_OPTION){
                 configclass dbc = new configclass();
                 int u_id = Integer.parseInt(id);
-                dbc.deleteData(u_id, "tbl_user", "user_id");
+                dbc.deleteData(u_id, "users", "u_id");
                 displayData();
             }
         }

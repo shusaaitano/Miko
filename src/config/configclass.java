@@ -24,23 +24,55 @@ public class configclass {
         }
     }
 
-    // The method your register.java is looking for
-    public int insertData(String sql, Object... values) {
-        try (Connection conn = connectDB(); 
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+   public int insertData(String sql){
+    try (Connection conn = connectDB();
+         PreparedStatement pst = conn.prepareStatement(sql)) {
 
-            for (int i = 0; i < values.length; i++) {
-                pstmt.setObject(i + 1, values[i]);
-            }
+        pst.executeUpdate();
+        System.out.println("Inserted Successfully!");
+        return 1;
 
-            pstmt.executeUpdate();
-            System.out.println("Record added successfully!");
-            return 1;
-        } catch (SQLException e) {
-            System.out.println("Insert Error: " + e.getMessage());
-            return 0;
-        }
+    } catch(SQLException ex){
+        System.out.println("Connection Error: " + ex);
+        return 0;
     }
+}
+    public void updateData(String sql){
+    try (Connection conn = connectDB();
+         PreparedStatement pst = conn.prepareStatement(sql)) {
+
+        int rowsUpdated = pst.executeUpdate();
+
+        if(rowsUpdated > 0){
+            JOptionPane.showMessageDialog(null, "Data Updated Successfully!");
+        } else {
+            System.out.println("Data Update Failed!");
+        }
+
+    } catch(SQLException ex){
+        System.out.println("Connection Error: " + ex);
+    }
+}
+        
+     public void deleteData(int id, String table, String table_id){
+    try (Connection conn = connectDB();
+         PreparedStatement pst = conn.prepareStatement(
+             "DELETE FROM " + table + " WHERE " + table_id + " = ?")) {
+
+        pst.setInt(1, id);
+        int rowsDeleted = pst.executeUpdate();
+
+        if(rowsDeleted > 0){
+            JOptionPane.showMessageDialog(null, "Deleted Successfully!");
+        } else {
+            System.out.println("Deletion Failed!");
+        }
+
+    } catch(SQLException ex){
+        JOptionPane.showMessageDialog(null, 
+            "Data cannot be deleted\nContact the administrator.");
+    }
+}
 
     public String authenticate(String sql, Object... values) {
         try (Connection conn = connectDB();
@@ -77,36 +109,5 @@ public class configclass {
             return rst;
         }
       
-         public void updateData(String sql){
-            try{
-                PreparedStatement pst = connect.prepareStatement(sql);
-                    int rowsUpdated = pst.executeUpdate();
-                        if(rowsUpdated > 0){
-                            JOptionPane.showMessageDialog(null, "Data Updated Successfully!");
-                        }else{
-                            System.out.println("Data Update Failed!");
-                        }
-                        pst.close();
-            }catch(SQLException ex){
-                System.out.println("Connection Error: "+ex);
-            }
-        
-        }
-        
-        //Function to delete data
-        public void deleteData(int id, String table, String table_id){
-            try{
-                PreparedStatement pst = connect.prepareStatement("DELETE FROM "+table+" WHERE "+table_id+" = ?");
-                pst.setInt(1, id);
-                int rowsDeleted = pst.executeUpdate();
-                    if(rowsDeleted > 0){
-                        JOptionPane.showMessageDialog(null, "Deleted Successfully!");
-                    }else{
-                        System.out.println("Deletion Failed!");
-                    }
-                    pst.close();
-            }catch(SQLException ex){
-                JOptionPane.showMessageDialog(null, "Data cannot be deleted\nContact the administrator.");
-            }
-        }
+     
 }

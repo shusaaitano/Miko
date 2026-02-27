@@ -241,7 +241,7 @@ public class userForm extends javax.swing.JFrame {
             int check = validateRegister();
             if(check == 1){
                 configclass dbc = new configclass();
-                int result = dbc.insertData("INSERT INTO tbl_users (u_fname, email, password, username, contact, u_status) "
+                int result = dbc.insertData("INSERT INTO users (u_fname, u_email, u_password, u_username, u_phone, u_status) "
                     + "VALUES ('"+fname.getText()+"', '"+email.getText()+"', '"+pword+"', '"+uname.getText()+"', '"+con.getText()+"', 'Pending')");
                 if(result == 1){
                     JOptionPane.showMessageDialog(null, "Successfully Save!");
@@ -255,9 +255,9 @@ public class userForm extends javax.swing.JFrame {
 
         }else if(action.equals("Update")){
             configclass dbc = new configclass();
-            dbc.updateData("UPDATE tbl_users SET u_fname = '"+fname.getText()+"', email = '"+email.getText()+"',"
-                + " password = '"+pword.getText()+"', username = '"+uname.getText()+"', "
-                + "contact = '"+con.getText()+"' WHERE u_id  = '"+u_id.getText()+"'");
+            dbc.updateData("UPDATE users SET u_fname = '"+fname.getText()+"', u_email = '"+email.getText()+"',"
+                + " u_password = '"+pword.getText()+"', u_username = '"+uname.getText()+"', "
+                + "u_phone = '"+con.getText()+"' WHERE u_id  = '"+u_id.getText()+"'");
             close();
         }else{
             JOptionPane.showMessageDialog(null, "No action selected!");

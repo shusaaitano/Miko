@@ -8,7 +8,7 @@ public class Session {
     private String phone;
     private String username;
 
-    private Session() {}
+    public Session() {}
 
     public static Session getInstance() {
         if (instance == null) {

@@ -10,9 +10,10 @@ public class Singleton {
     private static Singleton instance;
     private int id;
     private String fname;
-    private String lname;
     private String email;
+    private String password;
     private String username;
+    private String phone;
     private String status;
 
     private Singleton() {
@@ -30,7 +31,7 @@ public class Singleton {
         return instance == null;
     }
 
-   public int getId() {
+    public int getId() {
         return id;
     }
 
@@ -46,20 +47,20 @@ public class Singleton {
         this.fname = fname;
     }
 
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUsername() {
@@ -69,13 +70,22 @@ public class Singleton {
     public void setUsername(String username) {
         this.username = username;
     }
-    
-      public String getStatus() {
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
-}
 
+    
+}
