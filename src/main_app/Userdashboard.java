@@ -41,9 +41,6 @@ public class Userdashboard extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         userpane = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        dashpane1 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         dashlogout = new javax.swing.JButton();
         maindesktop = new javax.swing.JDesktopPane();
@@ -98,7 +95,7 @@ public class Userdashboard extends javax.swing.JFrame {
         jLabel8.setText("PAYMENTS");
         payments.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 80, 20));
 
-        navbar.add(payments, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 40));
+        navbar.add(payments, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 160, 40));
 
         userpane.setBackground(new java.awt.Color(102, 102, 102));
         userpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,32 +117,6 @@ public class Userdashboard extends javax.swing.JFrame {
         userpane.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 60, -1));
 
         navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 160, 40));
-
-        dashpane1.setBackground(new java.awt.Color(102, 102, 102));
-        dashpane1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dashpane1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                dashpane1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                dashpane1MouseExited(evt);
-            }
-        });
-        dashpane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("DASHBOARD");
-        dashpane1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, -1));
-
-        navbar.add(dashpane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 160, 40));
-
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("ACTIVE");
-        navbar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 80, -1));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 60, 160, 360);
@@ -202,8 +173,7 @@ public class Userdashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
-        manageUser mr = new manageUser();
-        maindesktop.add(mr).setVisible(true);
+      
     }//GEN-LAST:event_dashpaneMouseClicked
 
     private void dashpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseEntered
@@ -244,19 +214,6 @@ public class Userdashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_dashlogoutActionPerformed
 
-    private void dashpane1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dashpane1MouseExited
-
-    private void dashpane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dashpane1MouseEntered
-
-    private void dashpane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseClicked
-        dashBoardPage dbp = new dashBoardPage();
-        maindesktop.add(dbp).setVisible(true);
-    }//GEN-LAST:event_dashpane1MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -295,13 +252,10 @@ public class Userdashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton dashlogout;
     private javax.swing.JPanel dashpane;
-    private javax.swing.JPanel dashpane1;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
