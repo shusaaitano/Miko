@@ -38,9 +38,11 @@ public class userprofile extends javax.swing.JInternalFrame {
         ID = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        p_email = new javax.swing.JLabel();
+        cont = new javax.swing.JLabel();
         p_name = new javax.swing.JLabel();
         p_id = new javax.swing.JLabel();
+        fullname1 = new javax.swing.JLabel();
+        p_email1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         manageUser = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -62,20 +64,23 @@ public class userprofile extends javax.swing.JInternalFrame {
         fullname.setBackground(new java.awt.Color(204, 204, 204));
         fullname.setFont(new java.awt.Font("Malgun Gothic Semilight", 1, 24)); // NOI18N
         fullname.setForeground(new java.awt.Color(204, 204, 204));
+        fullname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fullname.setText("Full name: ");
-        jPanel2.add(fullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 30));
+        jPanel2.add(fullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 130, 40));
 
         email.setBackground(new java.awt.Color(204, 204, 204));
         email.setFont(new java.awt.Font("Malgun Gothic Semilight", 1, 24)); // NOI18N
         email.setForeground(new java.awt.Color(204, 204, 204));
+        email.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         email.setText("Email: ");
-        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 120, 30));
+        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 100, 30));
 
         ID.setBackground(new java.awt.Color(204, 204, 204));
         ID.setFont(new java.awt.Font("Malgun Gothic Semilight", 1, 24)); // NOI18N
         ID.setForeground(new java.awt.Color(204, 204, 204));
+        ID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ID.setText("User ID: ");
-        jPanel2.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 140, 30));
+        jPanel2.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 110, 40));
 
         jPanel4.setBackground(new java.awt.Color(153, 153, 153));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -86,23 +91,36 @@ public class userprofile extends javax.swing.JInternalFrame {
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 160, 140));
 
-        p_email.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        p_email.setForeground(new java.awt.Color(204, 204, 204));
-        p_email.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        p_email.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel2.add(p_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 180, 30));
+        cont.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cont.setForeground(new java.awt.Color(204, 204, 204));
+        cont.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cont.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 180, 30));
 
         p_name.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
         p_name.setForeground(new java.awt.Color(204, 204, 204));
         p_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         p_name.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel2.add(p_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 180, 30));
+        jPanel2.add(p_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 180, 30));
 
         p_id.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         p_id.setForeground(new java.awt.Color(204, 204, 204));
         p_id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         p_id.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel2.add(p_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 180, 30));
+        jPanel2.add(p_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 180, 30));
+
+        fullname1.setBackground(new java.awt.Color(204, 204, 204));
+        fullname1.setFont(new java.awt.Font("Malgun Gothic Semilight", 1, 24)); // NOI18N
+        fullname1.setForeground(new java.awt.Color(204, 204, 204));
+        fullname1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fullname1.setText("Full name: ");
+        jPanel2.add(fullname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 40));
+
+        p_email1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        p_email1.setForeground(new java.awt.Color(204, 204, 204));
+        p_email1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        p_email1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(p_email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 180, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 190));
 
@@ -240,8 +258,10 @@ public class userprofile extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel ID;
+    public javax.swing.JLabel cont;
     public javax.swing.JLabel email;
     public javax.swing.JLabel fullname;
+    public javax.swing.JLabel fullname1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -253,7 +273,7 @@ public class userprofile extends javax.swing.JInternalFrame {
     private javax.swing.JPanel manageUser;
     private javax.swing.JPanel manageUser1;
     private javax.swing.JPanel members;
-    public javax.swing.JLabel p_email;
+    public javax.swing.JLabel p_email1;
     public javax.swing.JLabel p_id;
     public javax.swing.JLabel p_name;
     private javax.swing.JLabel username1;

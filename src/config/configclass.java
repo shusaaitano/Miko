@@ -6,10 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
 public class configclass {
-    
+    public Connection connect;
     // Single Connection Method to ensure consistency
     public Connection connectDB() {
         try {
@@ -74,5 +75,38 @@ public class configclass {
             Statement stmt = conn.createStatement();
             ResultSet rst = stmt.executeQuery(sql);
             return rst;
+        }
+      
+         public void updateData(String sql){
+            try{
+                PreparedStatement pst = connect.prepareStatement(sql);
+                    int rowsUpdated = pst.executeUpdate();
+                        if(rowsUpdated > 0){
+                            JOptionPane.showMessageDialog(null, "Data Updated Successfully!");
+                        }else{
+                            System.out.println("Data Update Failed!");
+                        }
+                        pst.close();
+            }catch(SQLException ex){
+                System.out.println("Connection Error: "+ex);
+            }
+        
+        }
+        
+        //Function to delete data
+        public void deleteData(int id, String table, String table_id){
+            try{
+                PreparedStatement pst = connect.prepareStatement("DELETE FROM "+table+" WHERE "+table_id+" = ?");
+                pst.setInt(1, id);
+                int rowsDeleted = pst.executeUpdate();
+                    if(rowsDeleted > 0){
+                        JOptionPane.showMessageDialog(null, "Deleted Successfully!");
+                    }else{
+                        System.out.println("Deletion Failed!");
+                    }
+                    pst.close();
+            }catch(SQLException ex){
+                JOptionPane.showMessageDialog(null, "Data cannot be deleted\nContact the administrator.");
+            }
         }
 }

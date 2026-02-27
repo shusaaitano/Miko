@@ -1,32 +1,29 @@
-package main_app;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-    import java.awt.Color;
+package main_app;
+
+ import java.awt.Color;
     import internalPages.*;
     import internalPages.dashBoardPage;
     import config.Session;
-    
 /**
  *
- * @author Admin
+ * @author Angie
  */
-public class dashboard extends javax.swing.JFrame {
+public class Userdashboard extends javax.swing.JFrame {
 
     /**
-     * Creates new form dashboadrd
+     * Creates new form Userdashboard
      */
-    public dashboard() {
+    public Userdashboard() {
         initComponents();
-        
     }
-     Color navcolor = new Color (102,102,102);
+    Color navcolor = new Color (102,102,102);
      Color headcolor = new Color (51,51,51);
      Color bodycolor = new Color (153,153,153);
-      
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -194,72 +191,71 @@ public class dashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(816, 459));
-        setLocationRelativeTo(null);
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
+        manageUser mr = new manageUser();
+        maindesktop.add(mr).setVisible(true);
+    }//GEN-LAST:event_dashpaneMouseClicked
+
     private void dashpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseEntered
-      dashpane.setBackground(bodycolor);
+        dashpane.setBackground(bodycolor);
     }//GEN-LAST:event_dashpaneMouseEntered
 
     private void dashpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseExited
-      dashpane.setBackground(navcolor);
+        dashpane.setBackground(navcolor);
     }//GEN-LAST:event_dashpaneMouseExited
 
     private void paymentsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paymentsMouseEntered
-       payments.setBackground(bodycolor);
+        payments.setBackground(bodycolor);
     }//GEN-LAST:event_paymentsMouseEntered
 
     private void paymentsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paymentsMouseExited
-       payments.setBackground(navcolor);
+        payments.setBackground(navcolor);
     }//GEN-LAST:event_paymentsMouseExited
 
-    private void dashlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashlogoutActionPerformed
-     int a = javax.swing.JOptionPane.showConfirmDialog(null, "Are you sure you want to logout?", "Select", javax.swing.JOptionPane.YES_NO_OPTION); 
-    if (a == 0) {
-        landingpage lp = new landingpage();
-        lp.setVisible(true);
-        this.dispose();
-    }
-    }//GEN-LAST:event_dashlogoutActionPerformed
-
-    private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
-       userprofile ue = new userprofile();
-        maindesktop.add(ue).setVisible(true);
-    }//GEN-LAST:event_dashpaneMouseClicked
-
     private void userpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseClicked
-    manageUser ur = new manageUser();
-    maindesktop.add(ur).setVisible(true);
+        manageUser ur = new manageUser();
+        maindesktop.add(ur).setVisible(true);
     }//GEN-LAST:event_userpaneMouseClicked
 
     private void userpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseEntered
-     userpane.setBackground(bodycolor);
+        userpane.setBackground(bodycolor);
     }//GEN-LAST:event_userpaneMouseEntered
 
     private void userpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userpaneMouseExited
-     userpane.setBackground(navcolor);
+        userpane.setBackground(navcolor);
     }//GEN-LAST:event_userpaneMouseExited
 
-    private void dashpane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseClicked
-     dashBoardPage dbp = new dashBoardPage();
-     maindesktop.add(dbp).setVisible(true);
-    }//GEN-LAST:event_dashpane1MouseClicked
-
-    private void dashpane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dashpane1MouseEntered
+    private void dashlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashlogoutActionPerformed
+        int a = javax.swing.JOptionPane.showConfirmDialog(null, "Are you sure you want to logout?", "Select", javax.swing.JOptionPane.YES_NO_OPTION);
+        if (a == 0) {
+            landingpage lp = new landingpage();
+            lp.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_dashlogoutActionPerformed
 
     private void dashpane1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_dashpane1MouseExited
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void dashpane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_dashpane1MouseEntered
+
+    private void dashpane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpane1MouseClicked
+        dashBoardPage dbp = new dashBoardPage();
+        maindesktop.add(dbp).setVisible(true);
+    }//GEN-LAST:event_dashpane1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -278,21 +274,20 @@ public class dashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Userdashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Userdashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Userdashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Userdashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashboard().setVisible(true);
+                new Userdashboard().setVisible(true);
             }
         });
     }
